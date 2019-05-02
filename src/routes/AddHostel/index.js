@@ -3,9 +3,11 @@ import {create} from '../../services/hostels';
 import maps from '@google/maps'
 import constants from '../../utils/constants';
 
-const googleMapsClient = maps.createClient({
+const gmap = maps.createClient({
     key: constants.google.maps.apiKey
   });
+  
+  console.log()
 
 export default class AddHotel extends React.Component{
     constructor(props){
@@ -33,6 +35,14 @@ export default class AddHotel extends React.Component{
         
         let response = await create(this.state);
         alert(response);
+    }
+    componentDidMount(){
+        let city = document.getElementsByName('city')[0];
+        console.log(gmap)
+        console.log(gmap.placesAutoComplete({
+            input:"Mangaluru",
+            sessiontoken:maps.util.placesAutoCompleteSessionToken()
+        }));
     }
     render(){
         return(<div>

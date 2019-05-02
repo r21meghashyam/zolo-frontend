@@ -9,10 +9,16 @@ import AddHostel from './routes/AddHostel'
 import ListHostels from './routes/ListHostels'
 import ViewHostel from './routes/ViewHostel'
 import Home from './routes/Home';
+import './style.css'
+
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
    <Router>
+     <Header/>
+     <Sidebar/>
      <Switch>
        <Route path="/register" component={Register} exact/>
        <Route path="/login" component={Login} exact/>

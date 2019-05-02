@@ -1,0 +1,12 @@
+.header{
+    box-shadow: 1px 1px 10px #DDD;
+    padding-left:100px;
+}
+.header .logo{
+    width:3.4375rem;
+}
+.header img{
+    padding: 10px;
+    cursor: pointer;
+    margin-left:20px;
+}

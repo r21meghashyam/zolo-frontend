@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.sidebar .panel{
+    position: fixed;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    height:100%;
+    background: #3c9fd9;
+    color:#fff;
+    font-size: 1.5em;
+    padding:40px;
+   font-family: 'Open Sans',sans-serif;
+   font-weight: 900;
+    margin-left: -100%;
+    transition: margin-left 1s;
+}
+.sidebar.open .panel{
+    margin-left: 0px;
+}
+.sidebar.open .background{
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.sidebar .background{
+    position: fixed;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    height: 100%;
+    width: 100%;
+    display: none;
+   transition: background-color 3s;
+
+}
+.sidebar .closeBtn{
+    width:25px;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0px;
+}
+.sidebar a{
+    color:#fff;
+    text-decoration: none;
+    
+}
+.sidebar li{
+    padding:20px;
+    position: relative;
+    min-width: 200px;
+}
+.sidebar li::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    background: -webkit-linear-gradient(left,#fff,transparent);
+}
+.sidebar .division {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.sidebar .contact{
+    margin-top:30px;
+    padding:10px;
+    font-weight: normal;
+}
+.sidebar .bottom{
+    position: absolute;
+    bottom:100px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.sidebar .bottom div{
+    display: inline-block;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: normal;
+}
