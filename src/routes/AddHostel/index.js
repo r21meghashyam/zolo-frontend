@@ -1,5 +1,11 @@
 import React from 'react';
-import {create} from '../../services/hostels'
+import {create} from '../../services/hostels';
+import maps from '@google/maps'
+import constants from '../../utils/constants';
+
+const googleMapsClient = maps.createClient({
+    key: constants.google.maps.apiKey
+  });
 
 export default class AddHotel extends React.Component{
     constructor(props){
